@@ -44,7 +44,20 @@ int main(){
         }
     }
 
-    free(intArrayCalloc);
+    // free(intArrayCalloc);
 
+    decorate();
+    
+    printf("Using realloc to reallocate memory\n");
+    int *intArrayRealloc = realloc(intArrayCalloc, 10 * sizeof *intArrayRealloc);
+    if(intArrayRealloc){
+         for(int n = 0; n < 4; ++n){
+            printf("%d element is %d\n",n, intArrayRealloc[n]);
+         }
+
+         free(intArrayRealloc);
+    }else{
+        free(intArrayCalloc);
+    }
 
 }
