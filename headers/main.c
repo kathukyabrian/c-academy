@@ -3,9 +3,10 @@
 
 #include "sum.h"
 
+
 int sumOfTwoNumbers(int a, int b)
 {
-    return a + b;
+    return LIMIT + LIMIT;
 }
 
 int main()
