@@ -22,27 +22,10 @@ int main()
      */
     FILE *file = fopen("note.txt", "r");
 
-    if (!file)
-    {
-        perror("Error opening file");
-        return EXIT_FAILURE;
-    }
+    char buff[255];
 
-    // keep reading the file if EOF not reached
-    int c;
-    while ((c = fgetc(file)) != EOF)
-    { // standard C I/O file reading loop
-        putchar(c);
-    }
-
-    // check if an error occured or if EOF was reached
-    if (ferror(file))
-    {
-        puts("I/O error while reading file");
-    }
-    else if (feof(file))
-    {
-        puts("End of file reached successfully");
+    while(fgets(buff, 255, file)){
+        printf("%s", buff);
     }
 
     // close the file
