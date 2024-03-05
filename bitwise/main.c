@@ -85,6 +85,19 @@ int main(){
 
     printf("value of x after swapping is %d\n", x);
     printf("value of y after swapping is %d\n", y);
+
+
+    unsigned int hex = 0;
+    unsigned char colorOne = 10;
+    unsigned char colorTwo = 20;
+    unsigned char colorThree = 30;
+    unsigned char colorFour = 10;
+
+    hex = colorOne << 24 | colorTwo << 16 | colorThree << 8 | colorFour ;
+    // 00001010 00010100 00011110 00001010
+
+    printf("the value of x is %b in binary and %x in hex\n", hex, hex);
+
 }
 
 void checkIfEvenOrOdd(int number){
