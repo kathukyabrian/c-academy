@@ -37,6 +37,54 @@ int main(){
     // int evenOrOddNumber;
     // scanf("%d", &evenOrOddNumber);
     // checkIfEvenOrOdd(evenOrOddNumber);
+
+    int x = 10; //1010
+    int y = 15; //1111
+
+    printf("value of x before swapping is %d\n", x);
+    printf("value of y before swapping is %d\n", y);
+
+    // rules of bitwise xor
+    // 1 ^ 0 = 1
+    // 0 ^ 1 = 1
+    // 0 ^ 0 = 0
+    // 1 ^ 1 = 0
+
+
+    // 1010
+    // 1111
+    // ----
+    // 0101
+
+    // 0101
+    // 1111
+    // ----
+    // 1010 = 10
+
+    // 1010
+    // 0101
+    // ----
+    // 1111
+
+    x = x ^ y;
+    y = x ^ y;
+    x = x ^ y;
+    // explanation
+    // x = x ^ y
+    // y = x ^ y
+    // y = (x ^ y) ^ y
+    // y = x ^ (y ^ y)
+    // y = x ^ 0
+    // y = x  -> at this point the value of x is now in variable y
+
+    // x = x ^ y
+    // x = (x ^ y) ^ y
+    // x = x ^ (y ^ y)
+    // x = x ^ 0
+    // x = x
+
+    printf("value of x after swapping is %d\n", x);
+    printf("value of y after swapping is %d\n", y);
 }
 
 void checkIfEvenOrOdd(int number){
