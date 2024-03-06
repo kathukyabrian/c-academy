@@ -1,6 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#define READ_PERMISSION 0b00000001
+#define WRITE_PERMISSION 0b00000010
+#define ADMIN_PERMISSION 0b00000100
+
 void checkIfEvenOrOdd(int);
 
 int main(){
@@ -102,7 +106,14 @@ int main(){
     // not bitwise operator gets the 2's complement of a value
     // the result of the flipping is -(x+1)
     unsigned char num = 100;
-    printf("not bitwise operation value %d", ~100);
+    printf("not bitwise operation value %d\n", ~100);
+
+    // you can or several flags instead of using booleans
+    // if we used booleans we would use 3 bytes - each boolean flag is 3 bytes
+
+    unsigned char flags = 0;
+    flags |= READ_PERMISSION | WRITE_PERMISSION | ADMIN_PERMISSION;
+    printf("flags = %b\n", flags);
 }
 
 void checkIfEvenOrOdd(int number){
