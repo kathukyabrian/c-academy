@@ -98,6 +98,11 @@ int main(){
 
     printf("the value of x is %b in binary and %x in hex\n", hex, hex);
 
+
+    // not bitwise operator gets the 2's complement of a value
+    // the result of the flipping is -(x+1)
+    unsigned char num = 100;
+    printf("not bitwise operation value %d", ~100);
 }
 
 void checkIfEvenOrOdd(int number){
@@ -119,6 +124,4 @@ void checkIfEvenOrOdd(int number){
     }else{
         printf("%d is an even number\n");
     }
-
-
 }
