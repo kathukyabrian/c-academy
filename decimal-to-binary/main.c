@@ -13,7 +13,7 @@ int main()
 
     decimalToBinary(decimalNumber);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
 
 void decimalToBinary(int number)

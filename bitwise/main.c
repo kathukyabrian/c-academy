@@ -109,6 +109,22 @@ int main(){
     unsigned char flags = 0;
     flags |= READ_PERMISSION | WRITE_PERMISSION | ADMIN_PERMISSION;
     printf("flags = %b\n", flags);
+
+    // linux file permissions uses bitwise operations
+    // chmod 777 folder
+    // 777 - file owner, group, everyone else
+    // 7 in binary is 111 meaning that user can read, write and execute
+    // 110 - 6 - read, write, no excute
+    // 100 - 4 - read only
+
+    unsigned char linuxPermission = 4;
+    printf("linux permission in binary %b\n", linuxPermission);
+
+    printf("This user can read %b\n", (linuxPermission & 0b100) ==  0b100);
+    printf("This user can write %b\n", (linuxPermission & 0b010) == 0b010);
+    printf("This user can execute %b\n", (linuxPermission & 0b001) == 0b001);
+    // 100 & 111 = 100
+
 }
 
 void checkIfEvenOrOdd(int number){
