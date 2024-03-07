@@ -1,0 +1,10 @@
+#ifndef BITWISE_H
+#define BITWISE_H
+
+#define READ_PERMISSION 0b00000001
+#define WRITE_PERMISSION 0b00000010
+#define ADMIN_PERMISSION 0b00000100
+
+void checkIfEvenOrOdd(int);
+
+#endif

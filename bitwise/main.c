@@ -1,11 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-
-#define READ_PERMISSION 0b00000001
-#define WRITE_PERMISSION 0b00000010
-#define ADMIN_PERMISSION 0b00000100
-
-void checkIfEvenOrOdd(int);
+#include "bitwise.h"
 
 int main(){
     int age = 24;
