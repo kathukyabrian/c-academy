@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/types.h>
+
+// has socket functions
 #include <sys/socket.h>
+
+// has sockaddr ds
 #include <netinet/in.h>
 
 // configurations - port and buffer size
