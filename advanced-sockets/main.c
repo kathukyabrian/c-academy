@@ -53,6 +53,10 @@ int main(){
         char client_message[BUFFER_SIZE];
         read(client_socket, &client_message, sizeof(client_message));
 
+        // add a way to handle http messages
+        // https://datatracker.ietf.org/doc/html/rfc2616
+        
+
         printf("message from client %s and size is %d", client_message, sizeof(client_message));
     }
 }
