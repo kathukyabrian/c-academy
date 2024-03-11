@@ -57,6 +57,6 @@ int main(){
         // https://datatracker.ietf.org/doc/html/rfc2616
         
 
-        printf("message from client %s and size is %d", client_message, sizeof(client_message));
+        printf("message from client %s", client_message);
     }
 }
