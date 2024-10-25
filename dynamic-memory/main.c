@@ -25,6 +25,7 @@ int main(){
     }
 
     // free the memory address to avoid memory leak
+    // memory leak - a situation in which memory has not been released and therefore cannot be used.
     free(intArray);
 
 
