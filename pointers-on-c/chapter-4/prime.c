@@ -8,18 +8,9 @@ int main()
 {
     printf("this function checks if a number is prime....\n");
 
-    checkIfPrime(10);
-    checkIfPrime(1);
-    checkIfPrime(-13);
-    checkIfPrime(13);
-    checkIfPrime(27);
-    checkIfPrime(57);
-    checkIfPrime(1009);
-    checkIfPrime(23773737);
-    checkIfPrime(810);
-    checkIfPrime(100000001);
-    checkIfPrime(499999);
-    checkIfPrime(91);
+    for(int i = 0; i < 1000; i++){
+        checkIfPrime(i);
+    }
 }
 
 void checkIfPrime(int number)
